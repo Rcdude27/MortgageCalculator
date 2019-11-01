@@ -31,9 +31,9 @@
             this.lblInterest = new System.Windows.Forms.Label();
             this.lblTerm = new System.Windows.Forms.Label();
             this.btnCalc = new System.Windows.Forms.Button();
-            this.txtIntEarned = new System.Windows.Forms.TextBox();
+            this.txtPayment = new System.Windows.Forms.TextBox();
             this.lblMonthlyPayment = new System.Windows.Forms.Label();
-            this.cboCompMeth = new System.Windows.Forms.ComboBox();
+            this.txtTerm = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtPrinc
@@ -81,7 +81,6 @@
             // 
             // btnCalc
             // 
-            this.btnCalc.Enabled = false;
             this.btnCalc.Location = new System.Drawing.Point(88, 105);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(75, 23);
@@ -90,14 +89,14 @@
             this.btnCalc.UseVisualStyleBackColor = true;
             this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
-            // txtIntEarned
+            // txtPayment
             // 
-            this.txtIntEarned.Location = new System.Drawing.Point(139, 145);
-            this.txtIntEarned.Name = "txtIntEarned";
-            this.txtIntEarned.ReadOnly = true;
-            this.txtIntEarned.Size = new System.Drawing.Size(100, 20);
-            this.txtIntEarned.TabIndex = 8;
-            this.txtIntEarned.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPayment.Location = new System.Drawing.Point(139, 145);
+            this.txtPayment.Name = "txtPayment";
+            this.txtPayment.ReadOnly = true;
+            this.txtPayment.Size = new System.Drawing.Size(100, 20);
+            this.txtPayment.TabIndex = 8;
+            this.txtPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblMonthlyPayment
             // 
@@ -108,23 +107,22 @@
             this.lblMonthlyPayment.TabIndex = 7;
             this.lblMonthlyPayment.Text = "Monthly Payment ($)";
             // 
-            // cboCompMeth
+            // txtTerm
             // 
-            this.cboCompMeth.FormattingEnabled = true;
-            this.cboCompMeth.Location = new System.Drawing.Point(139, 64);
-            this.cboCompMeth.Name = "cboCompMeth";
-            this.cboCompMeth.Size = new System.Drawing.Size(100, 21);
-            this.cboCompMeth.TabIndex = 9;
-            this.cboCompMeth.SelectedIndexChanged += new System.EventHandler(this.cboCompMeth_SelectedIndexChanged);
+            this.txtTerm.Location = new System.Drawing.Point(139, 67);
+            this.txtTerm.Name = "txtTerm";
+            this.txtTerm.Size = new System.Drawing.Size(100, 20);
+            this.txtTerm.TabIndex = 9;
+            this.txtTerm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 177);
-            this.Controls.Add(this.cboCompMeth);
+            this.Controls.Add(this.txtTerm);
             this.Controls.Add(this.lblMonthlyPayment);
-            this.Controls.Add(this.txtIntEarned);
+            this.Controls.Add(this.txtPayment);
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.lblTerm);
             this.Controls.Add(this.lblInterest);
@@ -146,9 +144,9 @@
         private System.Windows.Forms.Label lblInterest;
         private System.Windows.Forms.Label lblTerm;
         private System.Windows.Forms.Button btnCalc;
-        private System.Windows.Forms.TextBox txtIntEarned;
+        private System.Windows.Forms.TextBox txtPayment;
         private System.Windows.Forms.Label lblMonthlyPayment;
-        private System.Windows.Forms.ComboBox cboCompMeth;
+        private System.Windows.Forms.TextBox txtTerm;
     }
 }
 

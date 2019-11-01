@@ -14,12 +14,21 @@ namespace MortgageCalculator {
             InitializeComponent();
         }
 
-        private void btnCalc_Click(object sender, EventArgs e) {
-            
+        private void btnCalc_Click(object sender, EventArgs e) 
+        {
+           txtPayment.Text = MortgageCalc(Convert.ToDouble(txtPrinc.Text), Convert.ToDouble(txtInterest.Text), Convert.ToDouble(txtTerm.Text));
         }
 
-        private void cboCompMeth_SelectedIndexChanged(object sender, EventArgs e) {
-            btnCalc.Enabled = (cboCompMeth.SelectedIndex >= 0);
+        private string MortgageCalc(double dPrinciple, double dAIR, double dTerm) 
+        {
+            double dTermInMonths = dTerm * 12;
+            double dMonthlyInterestRate = (dAIR / 12) / 100;
+            double d1PlusR = Math.Pow(1 + dMonthlyInterestRate, dTermInMonths);
+            double dNumerator = dMonthlyInterestRate * d1PlusR;
+            double dDenominator = d1PlusR - 1;
+            double dMortgagePayment = dPrinciple * (dNumerator / dDenominator);
+
+            return dMortgagePayment.ToString("C2");
         }
     }
 }
