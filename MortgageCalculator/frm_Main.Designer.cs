@@ -40,17 +40,21 @@
             // 
             this.txtPrinc.Location = new System.Drawing.Point(139, 12);
             this.txtPrinc.Name = "txtPrinc";
+            this.txtPrinc.ShortcutsEnabled = false;
             this.txtPrinc.Size = new System.Drawing.Size(100, 20);
             this.txtPrinc.TabIndex = 1;
             this.txtPrinc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrinc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrinc_KeyPress);
             // 
             // txtInterest
             // 
             this.txtInterest.Location = new System.Drawing.Point(139, 38);
             this.txtInterest.Name = "txtInterest";
+            this.txtInterest.ShortcutsEnabled = false;
             this.txtInterest.Size = new System.Drawing.Size(100, 20);
             this.txtInterest.TabIndex = 3;
             this.txtInterest.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtInterest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterest_KeyPress);
             // 
             // lblPrinc
             // 
@@ -111,9 +115,11 @@
             // 
             this.txtTerm.Location = new System.Drawing.Point(139, 67);
             this.txtTerm.Name = "txtTerm";
+            this.txtTerm.ShortcutsEnabled = false;
             this.txtTerm.Size = new System.Drawing.Size(100, 20);
             this.txtTerm.TabIndex = 9;
             this.txtTerm.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTerm.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTerm_KeyPress);
             // 
             // frm_Main
             // 
